@@ -19,7 +19,7 @@ public class SimpleuserapplicationApplication {
 	@Bean
 	CommandLineRunner init(UserRepository userRepository){
 		return args -> {
-			Stream.of("Jonh", "Julie", "Jennifer", "Helen", "Rachel").forEach(name -> {
+			Stream.of("John", "Julie", "Jennifer", "Helen", "Rachel").forEach(name -> {
 				User user = new User(name, name.toLowerCase() + "@domain.com");
 				userRepository.save(user);
 			});
